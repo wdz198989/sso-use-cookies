@@ -6,7 +6,9 @@
 </head>
 <body>
     <h1>欢迎来到登录页面</h1>
-  <form>
+    <!--登录失败的提示信息-->
+    <p style="color: red;" th:text="${session.msg}"></p>
+  <form action="/login" method="POST">
       用户名：<input name="username" value="">
       密码：<input name="password" value="">
       <button type="submit">登录</button>
